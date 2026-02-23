@@ -20,3 +20,15 @@ Diquinhas da dev do passado para a dev do futuro não esquecer
 
 - usar um .env.example e transformar ele em .env assim que a aplicação for executada.
 - usar uma script de inicialização com configuração .sh com inicialização para ambiente de produção
+
+### O que é o Redis?
+
+Redis é um servidor de banco de dados em memória, open-source, classificado como:
+Key–Value Store
+NoSQL
+In-memory data structure store
+Message broker (pub/sub)
+Cache distribuído
+Ele roda como um processo separado, normalmente na porta 6379, e as aplicações se conectam via TCP.
+
+
