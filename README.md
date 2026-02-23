@@ -24,11 +24,11 @@ Diquinhas da dev do passado para a dev do futuro não esquecer
 ### O que é o Redis?
 
 Redis é um servidor de banco de dados em memória, open-source, classificado como:
-Key–Value Store
-NoSQL
-In-memory data structure store
-Message broker (pub/sub)
-Cache distribuído
-Ele roda como um processo separado, normalmente na porta 6379, e as aplicações se conectam via TCP.
+- Key–Value Store
+- NoSQL
+- In-memory data structure store
+- Message broker (pub/sub)
+- Cache distribuído
+- Ele roda como um processo separado, normalmente na porta 6379, e as aplicações se conectam via TCP.
 
 
