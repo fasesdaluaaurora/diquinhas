@@ -15,3 +15,7 @@ Diquinhas da dev do passado para a dev do futuro não esquecer
 "VAR": "valor"
 }
 }]
+
+### Configs de ambiente:
+
+- usar um .env.example e transformar ele em .env assim que a aplicação for executada.
