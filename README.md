@@ -40,4 +40,10 @@ Quando usar NoSQL?
 - Alta taxa de escrita/leitura
 - Microserviços
 
+### Arquitetura
 
+- Rotas de edição sempre com campos opcionais
+- Rotas de delete hard sempre que possível.
+- Acesso a rotas com permissão.
+- Modelos dto para entrada de dados e saída
+- Arquivo para mensagens fixas isolado em constantes
