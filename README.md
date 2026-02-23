@@ -47,3 +47,4 @@ Quando usar NoSQL?
 - Acesso a rotas com permissão.
 - Modelos dto para entrada de dados e saída
 - Arquivo para mensagens fixas isolado em constantes
+- multitenancy em aplicações multi client
