@@ -29,6 +29,15 @@ Redis é um servidor de banco de dados em memória, open-source, classificado co
 - In-memory data structure store
 - Message broker (pub/sub)
 - Cache distribuído
-- Ele roda como um processo separado, normalmente na porta 6379, e as aplicações se conectam via TCP.
+
+Ele roda como um processo separado, normalmente na porta 6379, e as aplicações se conectam via TCP.
+
+Quando usar NoSQL?
+- Cache (Redis)
+- Alta escala distribuída
+- Dados semi-estruturados
+- Big Data
+- Alta taxa de escrita/leitura
+- Microserviços
 
 
