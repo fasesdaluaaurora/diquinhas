@@ -19,3 +19,4 @@ Diquinhas da dev do passado para a dev do futuro não esquecer
 ### Configs de ambiente:
 
 - usar um .env.example e transformar ele em .env assim que a aplicação for executada.
+- usar uma script de inicialização com configuração .sh com inicialização para ambiente de produção
