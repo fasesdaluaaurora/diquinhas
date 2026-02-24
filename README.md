@@ -65,6 +65,7 @@ src/
 - No banco, sempre armazenar para o usuário, a data de criação, de atualização e último login
 - Fazer um Regras.md com regras de negócio e requisitos funcionais na pasta docs
 - usar um mock.sql para alimentar o banco com dados iniciais da aplicação como user, permissão
+- usar uma variável global de ambiente
 
 ### Comandos
 
