@@ -51,7 +51,7 @@ Quando usar NoSQL?
 - usar um gerador de erro geral com códigos HTTP padrão de mercado
 - usar documentação de API com swegger
 - montar urls com envs dentro do código no arquivo de configuração
-- 
+- no arquivo de inicialização, validar se todas as variáveis de ambiente foram definidas e encerrar aplicação se não tiver sido
 
 
 ### Comandos
