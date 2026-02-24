@@ -69,3 +69,32 @@ src/
 ### Comandos
 
 - Limpar cache do python: find. -name "__pycache__" -exec rm -rf {} +
+
+### Documentação
+
+Relação entre RF e UC
+
+Um RF é uma regra ou capacidade obrigatória.
+
+Um UC é uma descrição estruturada do comportamento do sistema para atender um ou mais RFs.
+
+Exemplo prático
+
+- **RF01**: O sistema deve permitir login com e-mail e senha.
+
+
+  #### UC01 – Realizar Login
+
+**Ator**: Usuário
+
+**Pré-condição**: Usuário cadastrado
+
+**Fluxo principal**:
+1. Usuário informa e-mail
+2. Usuário informa senha
+3. Sistema valida credenciais
+4. Sistema concede acesso
+
+**Fluxo alternativo**:
+
+3a. Credenciais inválidas → Sistema exibe mensagem de erro
