@@ -48,6 +48,11 @@ Quando usar NoSQL?
 - Modelos dto para entrada de dados e saída
 - Arquivo para mensagens fixas isolado em constantes
 - multitenancy em aplicações multi client
+- usar alembic para realizar migrações
+- usar logging para inserir logs
+- usar um gerador de erro geral com códigos HTTP padrão de mercado
+- usar documentação de API com swegger
+- 
 
 
 ### Comandos
