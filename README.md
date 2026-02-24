@@ -52,10 +52,10 @@ Quando usar NoSQL?
 - usar logging para inserir logs
 - usar um gerador de erro geral com códigos HTTP padrão de mercado
 - usar documentação de API com swegger
+- montar urls com envs dentro do código no arquivo de configuração
 - 
 
 
 ### Comandos
 
 - Limpar cache do python: find. -name "__pycache__" -exec rm -rf {} +
-- 
