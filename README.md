@@ -52,6 +52,9 @@ Quando usar NoSQL?
 - usar documentação de API com swegger
 - montar urls com envs dentro do código no arquivo de configuração
 - no arquivo de inicialização, validar se todas as variáveis de ambiente foram definidas e encerrar aplicação se não tiver sido
+- 🔹 constants: São valores imutáveis em tempo de execução e normalmente fazem parte da regra do sistema. Ex: MAX_LOGIN_ATTEMPTS = 5, DEFAULT_PAGE_SIZE = 20, JWT_ALGORITHM = 'HS256'
+- 🔹 env: Valores configuráveis, dependentes do ambiente. São dependentes do ambiente (dev, staging, prod), mutáveis sem recompilar, normalmente sensíveis (segredos). Ex: DATABASE_URL, REDIS_HOST, JWT_SECRET, PORT
+- 🔹 config: São uma camada intermediária que organiza e valida valores vindos de variáveis de ambiente, de arquivos (.env, config.json), de defaults
 
 
 ### Comandos
