@@ -62,6 +62,8 @@ src/
  │   └─ index.ts      // objeto config exportado
  ├─ constants/
  │   └─ app.constants.ts
+- No banco, sempre armazenar para o usuário, a data de criação, de atualização e último login
+- Fazer um Regras.md com regras de negócio e requisitos funcionais
 
 ### Comandos
 
