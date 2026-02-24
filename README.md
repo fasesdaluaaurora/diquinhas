@@ -6,7 +6,7 @@ Diquinhas da dev do passado para a dev do futuro não esquecer
 - adicionar .vscode/ para manter configurações da IDE fora do commit.
 - .env
 
-### Debug
+### Configs de ambiente e Debug:
 
 - usar envs no lauch json para realizar o debug como em:
 
@@ -15,8 +15,6 @@ Diquinhas da dev do passado para a dev do futuro não esquecer
 "VAR": "valor"
 }
 }]
-
-### Configs de ambiente:
 
 - usar um .env.example e transformar ele em .env assim que a aplicação for executada.
 - usar uma script de inicialização com configuração .sh com inicialização para ambiente de produção
