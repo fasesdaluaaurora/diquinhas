@@ -48,3 +48,9 @@ Quando usar NoSQL?
 - Modelos dto para entrada de dados e saída
 - Arquivo para mensagens fixas isolado em constantes
 - multitenancy em aplicações multi client
+
+
+### Comandos
+
+- Limpar cache do python: find. -name "__pycache__" -exec rm -rf {} +
+- 
