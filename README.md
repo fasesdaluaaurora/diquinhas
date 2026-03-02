@@ -70,6 +70,7 @@ src/
 ### Comandos
 
 - Limpar cache do python: find. -name "__pycache__" -exec rm -rf {} +
+- Embelezar formatação: Ctrl + Shift + P -> Format Document With... -> Configure Default Formatter
 
 ### Documentação
 
