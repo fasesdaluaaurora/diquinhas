@@ -1,99 +1,161 @@
-🔹 1. Criar uma Collection
-Abra o Postman
-Clique em “New” → “Collection”
-Dê um nome (ex: Mock Whats API)
-🔹 2. Criar um endpoint mockado
+# 📡 Mock API com Postman
+
+Este guia mostra como criar uma **API mockada usando o Postman**, ideal para testar integrações (ex: webhooks, APIs externas como WhatsApp/Meta) sem precisar de backend real.
+
+---
+
+## 🚀 Objetivo
+
+Criar uma API fake com:
+
+* Endpoints HTTP (GET, POST, etc.)
+* Respostas JSON customizadas
+* URL pública para testes
+
+---
+
+## 🔹 1. Criar uma Collection
+
+1. Abra o Postman
+2. Clique em **"New" → "Collection"**
+3. Defina um nome (ex: `mock-api`)
+
+---
+
+## 🔹 2. Criar um endpoint
 
 Dentro da collection:
 
-Clique em “Add request”
-Configure:
+1. Clique em **"Add request"**
+2. Configure:
+
+```
 Method: GET
 URL: /users
-Vá em “Save”
-🔹 3. Definir a resposta mock
+```
 
-Agora o ponto chave:
+3. Clique em **Save**
 
-Clique na request criada
-Vá em “Examples” → “Add Example”
+---
+
+## 🔹 3. Criar resposta mock (Example)
+
+1. Abra a request criada
+2. Vá em **"Examples" → "Add Example"**
 
 Configure:
 
-Response Body:
+### Response Body
 
+```json
 [
   { "id": 1, "nome": "Luna" },
   { "id": 2, "nome": "Carlos" }
 ]
+```
 
-Status:
+### Status
 
+```
 200 OK
+```
 
-Headers (opcional):
+### Headers (opcional)
 
+```
 Content-Type: application/json
+```
 
-Salve o example.
+Salve o Example.
 
-🔹 4. Criar o Mock Server
-Clique nos 3 pontos da Collection
-Escolha “Mock collection”
-Configure:
-Environment: tanto faz
-Name: mock-users
-Privacy: Public (se quiser URL externa)
+---
 
-Finalize.
+## 🔹 4. Criar o Mock Server
 
-🔹 5. Usar a API mock
+1. Clique nos **3 pontos da Collection**
+2. Selecione **"Mock collection"**
+3. Configure:
 
-O Postman vai gerar algo assim:
+* **Name:** mock-api
+* **Environment:** default
+* **Privacy:** Public (para gerar URL externa)
 
+Finalize a criação.
+
+---
+
+## 🔹 5. Consumir a API
+
+O Postman irá gerar uma URL como:
+
+```
 https://xxxxx.mock.pstmn.io/users
+```
 
-Agora:
+### Teste com curl:
 
+```bash
 curl https://xxxxx.mock.pstmn.io/users
+```
 
-Resposta:
+### Resposta esperada:
 
+```json
 [
   { "id": 1, "nome": "Luna" },
   { "id": 2, "nome": "Carlos" }
 ]
-🔥 Recursos avançados (vale muito pra integração)
-✔ Mock condicional por header
+```
 
-Você pode diferenciar respostas usando:
+---
 
-x-mock-response-name: erro
+## 🔥 Recursos avançados
 
-E criar múltiplos examples:
+### ✔ Múltiplas respostas (mock dinâmico)
 
-success
-erro
-timeout
-✔ Simular erro
+Você pode criar vários Examples:
 
-Exemplo:
+* `success`
+* `error`
+* `timeout`
 
+E escolher via header:
+
+```
+x-mock-response-name: error
+```
+
+---
+
+### ✔ Simular erro
+
+**Response Body:**
+
+```json
 {
   "error": "Usuário não encontrado"
 }
+```
 
-Status:
+**Status:**
 
+```
 404
-✔ Simular webhook (seu caso 🔥)
+```
 
-Você pode mockar algo tipo:
+---
 
+### ✔ Simular webhook (ex: WhatsApp/Meta)
+
+Crie um endpoint:
+
+```
 POST /webhook
+```
 
-E criar exemplos de payload da Meta (WhatsApp), tipo:
+**Example de payload:**
 
+```json
 {
   "object": "whatsapp_business_account",
   "entry": [
@@ -104,7 +166,9 @@ E criar exemplos de payload da Meta (WhatsApp), tipo:
             "messages": [
               {
                 "from": "554899999999",
-                "text": { "body": "Olá" }
+                "text": {
+                  "body": "Olá"
+                }
               }
             ]
           }
@@ -113,14 +177,39 @@ E criar exemplos de payload da Meta (WhatsApp), tipo:
     }
   ]
 }
-⚠️ Limitações importantes
-Não executa lógica (é estático ou baseado em examples)
-Não mantém estado (não salva dados)
-Matching é simples (path + método + headers)
-✅ Quando usar Postman Mock
+```
 
-Use quando:
+---
 
-Precisa de URL pública rápida
-Está testando integração externa
-Quer simular payloads específicos (Meta, webhook, etc.)
+## ⚠️ Limitações
+
+* Não executa lógica (somente respostas estáticas)
+* Não persiste dados
+* Matching simples (rota + método + headers)
+
+---
+
+## ✅ Quando usar
+
+Use Mock Server do Postman quando:
+
+* Precisa de **URL pública rápida**
+* Está testando **integração com terceiros**
+* Quer simular **payloads reais sem backend**
+
+---
+
+## 📌 Dica
+
+Para testes mais robustos (com lógica, validação e estado), considere complementar com:
+
+* Mock em Node.js ou Go
+* Ferramentas como JSON Server ou Prism
+
+---
+
+## 🧪 Conclusão
+
+O Mock Server do Postman é a forma mais rápida de expor uma API fake funcional para testes de integração, especialmente útil em cenários com webhooks e serviços externos.
+
+---
